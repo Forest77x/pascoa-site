@@ -1,124 +1,234 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Páscoa Doce Encanto</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #fff7e6;
-      color: #4b2e2e;
-    }
-    header {
-      background: linear-gradient(135deg, #ffb703, #fb8500);
-      padding: 40px 20px;
-      text-align: center;
-      color: #fff;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2rem;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .produtos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 20px;
-      text-align: center;
-    }
-    .card img {
-      max-width: 100%;
-      border-radius: 10px;
-    }
-    .card h3 {
-      margin: 15px 0 10px;
-    }
-    .preco {
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #e85d04;
-    }
-    button {
-      margin-top: 15px;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 25px;
-      background: #ffb703;
-      color: #000;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #fb8500;
-      color: #fff;
-    }
-    footer {
-      background: #4b2e2e;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Ovo de Páscoa Gourmet | Páscoa Exclusiva</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --bg:#120505;
+  --bg2:#2a0d0d;
+  --gold:#f5c16c;
+  --gold2:#ffdf9e;
+  --text:#ffffff;
+  --muted:#d0c2c2;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Inter, Arial, sans-serif;
+}
+
+body{
+  background:
+    radial-gradient(1200px 500px at 50% -10%, #3b1414, transparent),
+    var(--bg);
+  color:var(--text);
+}
+
+/* HEADER */
+header{
+  padding:28px 20px;
+  text-align:center;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+header h1{
+  color:var(--gold);
+  letter-spacing:.5px;
+}
+
+/* HERO */
+.hero{
+  max-width:1200px;
+  margin:70px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+}
+
+@media(max-width:900px){
+  .hero{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+}
+
+/* TEXTO */
+.hero-text h2{
+  font-size:3rem;
+  line-height:1.1;
+  color:var(--gold);
+}
+.hero-text p{
+  margin-top:20px;
+  font-size:1.15rem;
+  color:var(--muted);
+}
+.highlight{
+  margin-top:18px;
+}
+.highlight strong{
+  color:var(--gold);
+}
+
+/* BOTÃO */
+.cta{
+  display:inline-block;
+  margin-top:30px;
+  padding:18px 48px;
+  border-radius:40px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2));
+  color:#2b0f0f;
+  font-weight:900;
+  text-decoration:none;
+  box-shadow:0 12px 35px rgba(245,193,108,.4);
+  transition:.3s;
+}
+.cta:hover{
+  transform:translateY(-2px);
+}
+
+/* PRODUTO */
+.product-card{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)),
+    var(--bg2);
+  border-radius:28px;
+  padding:26px;
+  box-shadow:0 30px 70px rgba(0,0,0,.55);
+  border:1px solid rgba(255,255,255,.08);
+  text-align:center;
+}
+
+/* IMAGEM */
+.product-card img{
+  width:100%;
+  border-radius:22px;
+  margin-bottom:22px;
+  box-shadow:0 25px 60px rgba(0,0,0,.65);
+  object-fit:cover;
+}
+
+/* PREÇOS */
+.price-old{
+  text-decoration:line-through;
+  color:#cbb;
+}
+.free{
+  color:var(--gold);
+  font-size:1.9rem;
+  font-weight:900;
+}
+
+/* BENEFÍCIOS */
+.section{
+  max-width:1200px;
+  margin:90px auto;
+  padding:0 20px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+@media(max-width:900px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+}
+.card{
+  background:rgba(255,255,255,.04);
+  border-radius:24px;
+  padding:30px;
+  border:1px solid rgba(255,255,255,.08);
+}
+.card h4{
+  color:var(--gold);
+  margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+  margin-top:90px;
+  padding:40px 20px;
+  text-align:center;
+  color:#b9aaaa;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <h1>Páscoa Doce Encanto</h1>
-    <p>Ovos de chocolate artesanais feitos com amor</p>
-  </header>
 
-  <section>
-    <h2>Nossos Produtos</h2>
-    <div class="produtos">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1612197527762-8cfb0c1d9f2a" alt="Ovo de Páscoa Tradicional" />
-        <h3>Ovo Tradicional</h3>
-        <p class="preco">R$ 59,90</p>
-        <button onclick="pagar('Ovo Tradicional', 59.90)">Comprar</button>
-      </div>
+<header>
+  <h1>Páscoa Exclusiva</h1>
+</header>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1589987607627-616cacb3e3f8" alt="Ovo de Páscoa Recheado" />
-        <h3>Ovo Recheado</h3>
-        <p class="preco">R$ 89,90</p>
-        <button onclick="pagar('Ovo Recheado', 89.90)">Comprar</button>
-      </div>
+<section class="hero">
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1615485737651-580f9c3f6f1c" alt="Cesta de Páscoa" />
-        <h3>Cesta de Páscoa</h3>
-        <p class="preco">R$ 129,90</p>
-        <button onclick="pagar('Cesta de Páscoa', 129.90)">Comprar</button>
-      </div>
+  <div class="hero-text">
+    <h2>Ovo de Páscoa<br>Gourmet Trufado</h2>
+
+    <p>
+      Chocolate artesanal de alta qualidade, textura cremosa
+      e acabamento premium para uma experiência única.
+    </p>
+
+    <p class="highlight">
+      🎁 <strong>PRODUTO 100% GRÁTIS</strong><br>
+      Você paga apenas o <strong>frete fixo de R$ 29,90</strong>.
+    </p>
+
+    <a class="cta"
+       href="https://app.evopay.cash/checkout/cmla7h0l60003iek68fceb61i">
+       Garantir Meu Ovo Gourmet
+    </a>
+  </div>
+
+  <div class="product-card">
+
+    <!-- IMAGEM REAL DE OVO GOURMET -->
+    <img 
+      src="https://images.unsplash.com/photo-1589712235274-8d6c1c3c6d6b?q=80&w=1200&auto=format&fit=crop"
+      alt="Ovo de Páscoa Gourmet Trufado">
+
+    <p class="price-old">De R$ 249,90</p>
+    <p class="free">GRÁTIS</p>
+
+    <a class="cta"
+       href="https://app.evopay.cash/checkout/cmla7h0l60003iek68fceb61i">
+       Pagar Frete R$ 29,90
+    </a>
+
+  </div>
+
+</section>
+
+<section class="section">
+  <div class="grid">
+    <div class="card">
+      <h4>🍫 Chocolate Premium</h4>
+      <p>Seleção rigorosa de ingredientes e padrão gourmet.</p>
     </div>
-  </section>
+    <div class="card">
+      <h4>🎁 Oferta Transparente</h4>
+      <p>O produto é gratuito. O valor pago é apenas do frete.</p>
+    </div>
+    <div class="card">
+      <h4>🔒 Pagamento Seguro</h4>
+      <p>Checkout protegido e confiável via EvoPay.</p>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2026 - Páscoa Doce Encanto | Encomendas pelo WhatsApp ou site</p>
-  </footer>
+<footer>
+  <p>© 2026 Páscoa Exclusiva</p>
+  <p>Promoção por tempo limitado • Frete R$ 29,90</p>
+</footer>
 
-  <script>
-    function pagar(produto, valor) {
-      alert(
-        'Produto: ' + produto + '\nValor: R$ ' + valor.toFixed(2) +
-        '\n\nAqui você vai integrar a carteira digital (Pix / Mercado Pago).'
-      );
-    }
-  </script>
 </body>
 </html>
